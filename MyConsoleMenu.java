@@ -11,7 +11,7 @@ public class MyConsoleMenu extends ConsoleMenu  {
             System.out.println("1) Download Csv file from Yahoo");
             System.out.println("2) Enter File Path from computer \n");
             this.option = inputInteger("Pick an option: ", "You haven't chosen any option ");
-        } while (this.option > 2)
+        } while (this.option > 2);
 
         firstOption();
 
@@ -22,7 +22,7 @@ public class MyConsoleMenu extends ConsoleMenu  {
             System.out.println("2) Create Csv File of the next 10 days profit %");
             System.out.println("3) Print table in console and Write Csv file of the 10 days profit %");
             this.outputOption = inputInteger("Pick an output Option from above:", "You haven't chosen any option");
-        } while( this.outputOption > 3)
+        } while( this.outputOption > 3);
 
         secondOption();
     }
