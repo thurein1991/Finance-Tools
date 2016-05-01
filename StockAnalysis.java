@@ -29,7 +29,7 @@ public class StockAnalysis {
                 String.valueOf(this.csvPercentageData.size() - 1) + ",";
         ArrayList<Double> doubleDayData = new ArrayList<>();
 
-        for (int day = 0; day < 10; day++) {
+        for (int day = 1; day < 11; day++) {
             doubleDayData.add(0.0);
         }
 
