@@ -133,11 +133,8 @@ public abstract class Engulfing {
 
     private String doProfitOperation(String firstDayAfterEngulfing, String currentDay, boolean isBullish) {
         double subtraction;
-        if (isBullish) {
-            subtraction = (Double.parseDouble(currentDay) - Double.parseDouble(firstDayAfterEngulfing));
-        } else {
-            subtraction = (Double.parseDouble(firstDayAfterEngulfing) - Double.parseDouble(currentDay));
-        }
+
+        subtraction = (Double.parseDouble(currentDay) - Double.parseDouble(firstDayAfterEngulfing));
 
         double percentage = (subtraction / Double.parseDouble(firstDayAfterEngulfing)) * 100;
         DecimalFormat dec = new DecimalFormat("0.00");
