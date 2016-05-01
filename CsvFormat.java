@@ -30,8 +30,8 @@ public class CsvFormat {
         percentageOfList.set(0, date);//  % listing changes the first value (N/A) for the current date date
 
         String formatString = ""; // Empty String to store the CSV string
-        for (int day = 0; day < 11; day++) { // We have 10 days plus day 0 which is N/A then 11 values
-            if (day != 11 - 1) { // If it is not the last date
+        for (int day = 1; day < 11; day++) { // We have 10 days plus day 0 which is N/A then 11 values
+            if (day != 11-1) { // If it is not the last date
                 formatString += percentageOfList.get(day) + ",";// add a coma "," at the end
             } else {
                 formatString += percentageOfList.get(day) + "\n"; // add a coma new line
@@ -85,7 +85,7 @@ public class CsvFormat {
     }
 
     private void printDelimeters() {
-        for (int day = 0; day < 12; day++) {
+        for (int day = 1; day < 11; day++) {
             System.out.print("+----------------");// Simulates the length of 11 cases/colums
         }
         System.out.print("+\n");
@@ -94,7 +94,7 @@ public class CsvFormat {
     private void printDays() {
         String charLimits = "| %-15s";// allow 15 char only to print.
 
-        for (int day = 0; day < 11; day++) {
+        for (int day = 1; day < 11; day++) {
             String dayString = "Day " + day; // allow 10 days only
             System.out.format(charLimits, dayString);
         }
