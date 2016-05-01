@@ -13,7 +13,7 @@ public abstract class Engulfing {
     private TextManipulation textManipulation = new TextManipulation();
 
     Engulfing(ArrayList<String> list) {
-        if (list.get(0).split(",").length >= 5) {
+        if (list.get(1).split(",").length >= 5) {
             // We skip first index because that's the category tables
             for (int index = 2; index < list.size(); index++) {
                 String[] previewsDay = list.get(index - 1).split(",");
@@ -109,8 +109,8 @@ public abstract class Engulfing {
 
     ArrayList<String> grabTenDaysAfter(ArrayList<String> list, int startIndex) {
         ArrayList<String> newList = new ArrayList<>();
-        // index 0 will be our engulfing the next 10 will be our data needed
-        for (int loops = 0; loops < 11; loops++) {
+        // index 0 will b our engulfing the next 10 will be our data needed
+        for (int loops = 1; loops < 1; loops++) {
             newList.add(list.get(startIndex));
             startIndex++;
         }
